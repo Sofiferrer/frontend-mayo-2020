@@ -20,6 +20,109 @@
                 background-size: cover;
             }
 
+            .navbar {
+                background-color: rgb(14, 13, 13, 0.5);
+            }
+
+            h1 {
+                color: beige;
+            }
+
+            .nav-link {
+                color: beige;
+            }
+
+            .card {
+                padding: 1rem;
+                margin: 2rem;
+                filter: drop-shadow(30px 10px 4px #11111198);
+                cursor: pointer;
+            }
+
+            .card-body {
+                text-align: center;
+            }
+
+            .card-img-top {
+                width: 100%;
+                height: 40vh;
+                object-fit: cover;
+            }
+
+            .transicion {
+                transition: all 0.5s;
+            }
+
+            .giro-izq {
+                transform: rotate(-3deg);
+            }
+
+            .giro-der {
+                transform: rotate(3deg);
+            }
+
+            .derecho {
+                transform: skew(2deg);
+            }
+
+            .byn {
+                filter: grayscale(80%) drop-shadow(30px 10px 4px #11111198);
+            }
+
+            .sepia {
+                filter: sepia(90%) drop-shadow(30px 10px 4px #11111198);
+            }
+
+            .giro-izq:hover {
+                transform: scale(1.2);
+                filter: grayscale(80%) drop-shadow(30px 10px 4px #11111198);                
+            }
+
+            .giro-der:hover {
+                transform: scale(1.2);
+            }
+
+            .derecho:hover {
+                transform: rotate(3deg);
+                filter: blur(1px) drop-shadow(30px 10px 4px #11111198);
+            }
+
+            .byn:hover {
+                filter: grayscale(0%) drop-shadow(30px 10px 4px #11111198);
+                transform: scale(1.2);
+            }
+
+            .sepia:hover {
+                filter: sepia(0%) drop-shadow(30px 10px 4px #11111198);
+                transform: rotate(1deg) scale(1.2);
+            }
+
+            @media only screen and (max-width: 1920px){
+            }
+
+            @media only screen and (max-width: 1280px){
+                .card {
+                    margin: auto;
+                }
+                .navbar{
+                    background-color: aqua;
+                }
+            }      
+
+            @media only screen and (max-width: 800px){
+                .card {
+                    margin: auto;
+                }
+                .navbar{
+                    background-color: rgb(255, 0, 179);
+                }
+            }     
+
+            @media only screen and (max-width: 480px){
+                .navbar{
+                    background-color: rgb(55, 226, 55);
+                }
+            } 
 
         </style>
     </head>
@@ -27,32 +130,128 @@
         <main>
             <div class="container">
                 <header>
-                    <div class="col-md-5"><h1>Galería con Bootsstrap</h1></div>
-                    <div>
-                        <nav>
-                            <ul class="nav justify-content-end">
-                                <li class="nav-item">
-                                <a class="nav-link active" href="#">Active</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="navbar">
+                        <div class="col-md-5"><h1>MIS FOTOS</h1></div>
+                        <div>                        
+                            <nav>                            
+                                <ul class="nav justify-content-end">
+                                    <li class="nav-item">
+                                    <a class="nav-link active" href="#"><i class="fa fa-home" aria-hidden="true"></i>Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Quienes somos?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">Contacto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </header>                        
+                </header>  
+                <br>
+                <br>            
                 <article>
-                    <section>                
-                    
-                    </section>
+                    <section class="row ml-auto mr-auto">                    
+                        <div class="col-lg-3 col-md-5 card transicion giro-izq" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\flores.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion derecho" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\arandanos.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion giro-der" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\jugo.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                    </section> 
+                    <section class="row ml-auto mr-auto">                    
+                        <div class="col-lg-3 col-md-5 card transicion giro-der" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\auto.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion byn" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\casa.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion giro-izq sepia" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\bici.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                    </section> 
+                    <section class="row ml-auto mr-auto">                    
+                        <div class="col-lg-3 col-md-5 card transicion giro-der" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\telefono.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion derecho" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\camarafotos.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion giro-izq" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\laptop.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                    </section> 
+                    <section class="row ml-auto mr-auto">                    
+                        <div class="col-lg-3 col-md-5 card transicion giro-izq" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\hombre.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion byn" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\guitarra.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 card transicion sepia" style="width: 18rem;">
+                            <img src="../../../img\galeria_de_fotos\mujer.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">TITULO</p>
+                            </div>
+                        </div>
+                    </section> 
                 </article>
             </div>
         </main>
+            <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+            ></script>
+            <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+            ></script>
+            <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+            ></script>
     </body>
 </html>  
